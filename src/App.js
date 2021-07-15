@@ -4,7 +4,7 @@ import './App.css';
 import React, { useState, useEffect } from 'react';
 import { getAllMovies } from './api/movies';
 
-function Movie() {
+function movie() {
 
     const [movies, setMovies] = useState([]);
 
@@ -36,4 +36,4 @@ function Movie() {
 );
 }
 
-export default Movie;
+export default movie;
