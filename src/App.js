@@ -24,16 +24,17 @@ function movie() {
 
         <
         ul > {
-            movies == undefined ? < p > hola < /p> : movies.map((item) => {
-            return <li key = { item.id } > { item.original_title } < /li>
-        })
-} <
-/ul>
+            movies && movies.map((item) => {
+                return <li key = { item.id } > { item.original_title } < /li>
+            })
+        } <
+        /ul>
 
-<
-/header> <
-/div>
-);
+        <
+        /header> <
+        /div>
+    );
+
 }
 
 export default movie;
