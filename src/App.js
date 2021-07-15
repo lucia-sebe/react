@@ -6,35 +6,31 @@ import { getAllMovies } from './api/movies';
 
 function movie() {
 
-    const [movies, setMovies] = useState([]);
+   const [movies, setMovies] = useState ([]);
 
     useEffect(() => {
-        getAllMovies.then((response) => {
-            setMovies(response.results)
-        })
+      getAllMovies.then((response) => {
+        setMovies(response.results)
+      })
     })
 
-    return ( <
-        div className = "text" >
-        <
-        header >
+    return(
+      <div className="text">
+        <header>
 
-        <
-        h1 > Bienvenido! < /h1>
+          <h1>Bienvenido!</h1>
 
-        <
-        ul > {
-            movies && movies.map((item) => {
-                return <li key = { item.id } > { item.original_title } < /li>
-            })
-        } <
-        /ul>
+         <ul>
+            {movies && movies.map((item) => {
+              return <li key={ item.id }> { item.original_title } </li>
+             })
+            }
+         </ul>
 
-        <
-        /header> <
-        /div>
+        </header>
+      </div>
     );
-
+   
 }
 
 export default movie;
