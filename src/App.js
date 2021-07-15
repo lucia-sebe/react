@@ -1,20 +1,39 @@
 /* eslint-disable react/react-in-jsx-scope */
 
 import './App.css';
+import React, { useState, useEffect } from 'react';
+import { getAllMovies } from './api/movies';
 
-function App() {
+function Movie() {
+
+    const [movies, setMovies] = useState([]);
+
+    useEffect(() => {
+        getAllMovies.then((response) => {
+            setMovies(response.results)
+        })
+    })
+
     return ( <
-        div className = "App" >
+        div className = "text" >
         <
         header >
+
         <
-        p >
-        Bienvenido!!!
+        h1 > Bienvenido! < /h1>
+
         <
-        /p> <
-        /header> <
-        /div>
-    );
+        ul > {
+            movies == undefined ? < p > hola < /p> : movies.map((item) => {
+            return <li key = { item.id } > { item.original_title } < /li>
+        })
+} <
+/ul>
+
+<
+/header> <
+/div>
+);
 }
 
-export default App;
+export default Movie;
