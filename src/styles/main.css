@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+}
+
+.fondo{
+    width: 100vw;
+    height: 100vh;
+    background-image: url('../ images/Bitmap.png');
+    background-size: 100%;
+}
+
+.encabezado{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    color: #ffff;
+}
+
+.pageName{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 2em;
+}
+
+.pageName img{
+    width: 15%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.access{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+#login{ 
+    padding: 0.5em 2.5em;
+    background-color: #0578FF;
+    border-radius: 4px;
+    margin: 2em
+}
+
+.bienvenida{
+    width: 100%;
+    height: 90%;
+    color: #ffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#mejorCine{
+    font-size: 5.4em;
+    font-weight: 640;   
+    margin-top: 1em;
+}
+
+#disfruta{
+    font-size: 1.5em;
+    font-weight: 640;   
+    padding: 0.5em 0 0; 
+}
+
+#pruebaAhora{
+    font-size: 1.3em;
+    padding: 0.5em 2.5em;
+    background-color: #0578FF;
+    border-radius: 4px;
+    margin-top: 7em;
+}
