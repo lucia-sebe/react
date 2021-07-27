@@ -35,7 +35,6 @@ function movie() {
     );
    
 }
-
 export default movie;
 */
 
