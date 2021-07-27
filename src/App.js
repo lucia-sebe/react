@@ -1,6 +1,9 @@
 /* eslint-disable react/react-in-jsx-scope */
 
+import Main from './MovyApp/main.js';
 import './App.css';
+
+/*
 import React, { useState, useEffect } from 'react';
 import { getAllMovies } from './api/movies';
 
@@ -34,3 +37,12 @@ function movie() {
 }
 
 export default movie;
+*/
+
+function Movy(){
+  return (
+    <Main/>
+  )
+}
+
+export default  Movy;
