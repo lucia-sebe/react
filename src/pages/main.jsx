@@ -1,9 +1,14 @@
 import React from 'react';
 import '../styles/main.css';
 import MovyLogo from '../ images/movylogo.png';
+import PlanBar from '../components/planBar';
+import {Link} from 'react-router-dom';
+import Footer from '../components/footer'
 
 function Main(){
+  
   return (
+    <>
     <main className="fondo">
       <header className="encabezado">
         <div className="pageName">
@@ -12,7 +17,7 @@ function Main(){
 
         <div className="access"> 
            <a>Register</a>
-           <a id="login">Login</a>
+           <Link to="/login" id="login">Login</Link>
         </div>
       </header>
 
@@ -22,6 +27,9 @@ function Main(){
          <a id="pruebaAhora">PRUEBA AHORA</a>
       </div>
     </main>
+    <PlanBar/>
+    <Footer/>
+    </>
     )
 }
 
