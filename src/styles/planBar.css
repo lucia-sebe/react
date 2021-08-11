@@ -1,0 +1,175 @@
+.opciones{
+   width: 100%;
+   height: 30%;
+   display: flex; 
+}
+
+.options{
+   width: 100%;
+   display: flex; 
+   align-items: center;
+   justify-content: flex-end;
+}
+
+.price{ 
+   width: 33%;
+   height: 100%;
+   background-color: #111111;
+   border: none;
+   display: flex;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.price img{
+   width: 20%;
+   height: 70%;
+   margin: 2em;
+}
+
+.cancel{ 
+   width: 34%;
+   height: 100%;
+   background-color: #111111;
+   border: none;
+   display: flex;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.cancel img{
+   width: 23%;
+   height: 70%;
+   margin: 2em;
+}
+
+.dispositivos{
+   width: 33%;
+   height: 100%;
+   background-color: #111111;
+   border: none;
+   display: flex;
+   justify-content: center;
+   cursor: pointer;
+}
+
+.dispositivos img{
+   width: 35%;
+   height: 75%;
+   margin: 1.5em;
+}
+
+
+.homePrice{
+   background-color: black;
+   width: 100vw;
+   height: 100vh;
+}
+
+#text{
+      font-size: 2em;
+}
+
+.titlePrice{
+   width: 100%;
+   height: 33%; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #ffff;
+}
+
+#mesGratis{
+   font-size: 1.3em;
+   padding: 0.5em 2.5em;
+   background-color: #0578FF;
+   border-radius: 4px;
+   margin: 1.5em;
+}
+
+.homeCancel{
+   background-color: black;
+   width: 100vw;
+   height: 90vh;
+   display: flex;
+}
+
+.titleCancel{
+   width: 35%;
+   height: 90%; 
+   margin: 0 0 0 10em;
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+   color: #ffff;
+}
+
+#cancelText{
+   font-size: 1.5em;
+   margin: 10em 0 0 1.7em;
+}
+
+.imagenCancel{
+   width: 35%;
+   height: 90%;
+   display: flex;
+}
+
+.imagenCancel img{
+   width: 100%;
+   height: 50%;
+   margin: 11em 3em;
+}
+
+.homeDispositivos{
+   background-color: black;
+   width: 100vw;
+   height: 100vh;
+}
+
+.titleDispositivos{
+   width: 100%;
+   height: 33%; 
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #ffff;
+}
+
+#dispositivosText{
+   padding: 0;
+   margin: 0 2em;
+   font-size: 1.5em;
+}
+
+.imagenesDispositivos{
+   width: 80%;
+   height: 30%;
+   margin: 0 8em;
+background-color: rgb(148, 77, 49);
+}
+
+#tv{
+   width: 30%;
+   height: 90%;
+   margin:0 4em 0 0;
+}
+
+#cambiar{
+   width: 25%;
+   height: 80%;
+   margin:0 4em 0 0;
+}
+#imgCancel{
+   width: 30%;
+   height: 90%;
+   
+}
+
+.textDispositivos{
+   color:#fff;
+   width: 80%;
+   height: 20%;
+   margin: 0 8em;
+   background-color: rgb(18, 70, 138);
+}
