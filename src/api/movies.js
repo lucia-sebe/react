@@ -1,4 +1,17 @@
-export const getAllMovies = fetch('https://api.themoviedb.org/3/movie/popular?api_key=715b3c6bbd6ab40e34894c211f5e1bef')
-    .then((response) => {
-        return response.json()
-    })
+const API_KEY = '7e3f2b63085dc68034c2f39e6a90e8bd';
+const BASE_URL = 'https://api.themoviedb.org/3';
+
+export const getPopularMovies = () => {
+    return fetch(`${BASE_URL}/movie/popular?api_key=${API_KEY}`)
+      .then((response) => response.json())
+}
+
+export const getRecommended = () => {
+  return fetch (`${BASE_URL}/movie/now_playing?api_key=${API_KEY}`)
+  .then((response) => response.json())
+}
+
+export const getTopRated = () => {
+  return fetch (`${BASE_URL}/movie/top_rated?api_key=${API_KEY}`)
+  .then((response) => response.json())
+}
