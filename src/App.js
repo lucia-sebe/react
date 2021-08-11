@@ -1,47 +1,34 @@
 /* eslint-disable react/react-in-jsx-scope */
-
-import Main from './MovyApp/main.js';
+import React from 'react';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
-/*
-import React, { useState, useEffect } from 'react';
-import { getAllMovies } from './api/movies';
+import Login from './pages/login';
+import Home from './pages/home';
+import Main from './pages/main.jsx';
 
-function movie() {
 
-   const [movies, setMovies] = useState ([]);
-
-    useEffect(() => {
-      getAllMovies.then((response) => {
-        setMovies(response.results)
-      })
-    })
-
-    return(
-      <div className="text">
-        <header>
-
-          <h1>Bienvenido!</h1>
-
-         <ul>
-            {movies && movies.map((item) => {
-              return <li key={ item.id }> { item.original_title } </li>
-             })
-            }
-         </ul>
-
-        </header>
-      </div>
-    );
-   
-}
-export default movie;
-*/
-
-function Movy(){
+function App(){
   return (
-    <Main/>
+    <>
+    <Router>
+      <Switch>
+        <Route path="/" exact>
+          <Main/>
+        </Route>
+
+        <Route path="/login">
+          <Login/>
+        </Route>
+
+        <Route path="/home">
+          <Home/>
+        </Route>
+        
+      </Switch>
+    </Router>
+    </>
   )
 }
 
-export default  Movy;
+export default  App;
