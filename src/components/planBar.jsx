@@ -1,4 +1,4 @@
-import React , {useState} from 'react';
+import React , { useState } from 'react';
 import '../styles/planBar.css';
 import Shape from '../ images/shape1.png';
 import Cancel from '../ images/cancel.png';

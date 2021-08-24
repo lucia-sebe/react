@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/planBar.css';
 import imgInCancel from '../ images/imgInCancel.png';
+
 function HomeCancel(){
     return(
     <div className="homeCancel">

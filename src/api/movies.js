@@ -15,3 +15,8 @@ export const getTopRated = () => {
   return fetch (`${BASE_URL}/movie/top_rated?api_key=${API_KEY}`)
   .then((response) => response.json())
 }
+
+export const getMovieDetails = (movie) => {
+  return fetch (`${BASE_URL}/movie/${movie}?api_key=${API_KEY}`)
+  .then((response) => response.json())
+}

@@ -1,14 +1,12 @@
 /* eslint-disable react/prop-types */
 import React from 'react';
-import {IMAGE_URL} from '../utils/constants';
+import { IMAGE_URL } from '../utils/constants';
 import '../styles/home.css';
 
-const Movie = ({ data }) => {
+export const Poster_path = ({ data }) => {
     return (
-      <div className="movie">
-       <img src={`${IMAGE_URL}${data?.poster_path}`}></img>
+      <div className="poster_path">
+       <img src={ `${IMAGE_URL}${data?.poster_path}` }></img>
       </div>
     )
-  }
-  
-export default Movie;
+}
