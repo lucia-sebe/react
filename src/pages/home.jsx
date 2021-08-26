@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import '../styles/home.css';
 import Footer from '../components/footer';
-
 import Carousel from '../components/carousel';
 import { getPopularMovies, getRecommended, getTopRated } from '../api/movies';
 import { getRandomNumber } from '../utils/constants';
-import Highlight from '../components/highlight'
+import Highlight from '../components/highlight';
+import '../styles/home.css';
 
 function Home(){
     
@@ -67,18 +66,6 @@ function Home(){
                      data={ recommended }
                      name="Recommended movies"
                  />
-                  
-                {/* 
-                    <div className="presentacionGrande">
-                         <div className="imagen">
-
-                         </div>
-
-                         <div className="descripcion">
-
-                         </div>
-                    </div>
-                */}
 
             </div>
 
