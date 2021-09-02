@@ -1,34 +1,11 @@
-.fondoHome{
-    width: 100vw;
-    height: 100vh;
-    background-size: 100%;
-}
-
 .movieDetails{
-    color: #fff;
-    margin: 5em 20em; 
+    color: rgb(255, 255, 255);
 }
 
-#movieTitle{
-    font-size: 10vh;
-    margin: 0.5em 0;
+.dateAndGenres{
+    color: rgb(109, 109, 109);
 }
 
-#dateAndGenres{
-    padding: 0;
-    color: rgb(88, 87, 87);
-}
-
-#runtime{
-    width: fit-content;
-    padding: 0.5em;
+.runtime{
     background-color: rgb(255, 0, 212);
-    border-radius: 0.5em;
-}
-
-#overview{
-    padding: 0;
-    margin: 2em 0;
-    font-size: 3vh;
-    line-height : 2em;
 }
