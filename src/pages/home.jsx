@@ -1,59 +1,42 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
+import {useSelector, useDispatch} from 'react-redux';
 import Footer from '../components/footer';
 import Carousel from '../components/carousel';
-import { getPopularMovies, getRecommended, getTopRated } from '../api/movies';
-import { getRandomNumber } from '../utils/constants';
 import Highlight from '../components/highlight';
+import {fetchPopularMovie, fetchRecommendedMovie, fetchTopRatedMovie, setBackgroundImage} from '../Redux/movieSlice';
 import '../styles/home.css';
+import { getRandomNumber } from '../utils/constants';
 
 function Home(){
     
-    const [backgroundImage, setBackgroundImage] = useState();
-  
-    const [popularMovies, setPopularMovies] = useState([]);
+    const loading = useSelector((state) => state.movie.loading);
+    const popular = useSelector((state) => state.movie.popular); 
+    const topRated = useSelector((state) => state.movie.topRated);    
+    const recommended = useSelector((state) => state.movie.recommended);    
+    const backgroundMovie = useSelector((state) => state.movie.backgroundImage);
+    const dispatch = useDispatch();
     useEffect(() => {
-      getPopularMovies()
-        .then((response) => {
-          setPopularMovies(response.results);
-        })
-        .catch((error) => {
-          console.log("Error: ", error);
-        });
+      dispatch(fetchPopularMovie())
+      dispatch(fetchRecommendedMovie())
+      dispatch(fetchTopRatedMovie())
       }, []);
 
-    const [recommended, setRecommended] = useState([]);
-    useEffect(() => {
-      getRecommended()
-        .then( (response ) => {
-          setRecommended(response.results);
-          setBackgroundImage( response.results[getRandomNumber(response.results.length)])
-        })
-        .catch((error) => {
-          console.log("Error: ", error);
-        });
-      }, []);
+      useEffect(() => {
+        dispatch(setBackgroundImage(recommended[getRandomNumber(recommended.length)]))
+      },[recommended]);
 
-    const [topRated, setTopRated] = useState([]);
-    useEffect(() => {
-      getTopRated()
-        .then((response) => {
-          setTopRated(response.results);
-        })
-        .catch((error) => {
-          console.log("Error: ", error);
-        });
-      }, []);
 
     return(
         <main>
-            {backgroundImage && <Highlight
-            movie={backgroundImage}
+            {backgroundMovie && <Highlight
+            movie={backgroundMovie}
             />}
-
+            {loading && <h1>loading</h1>}
             <div className="listas">
 
                  <Carousel 
-                     data={ popularMovies }
+                     data={ popular }
                      name="Popular on Movy"
                  />
                 

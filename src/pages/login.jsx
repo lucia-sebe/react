@@ -1,11 +1,13 @@
 import React from 'react';
-import '../styles/login.css';
 import MovyLogo from '../ images/movylogo.png';
 import {Link} from 'react-router-dom';
+import '../styles/login.css';
 
 function Login(){
+    
     return(       
         <main className="fondo">
+       
             <header className="encabezado">
                 <div className="pageName">
                     <img src={MovyLogo}></img>
