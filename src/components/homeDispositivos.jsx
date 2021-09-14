@@ -2,7 +2,8 @@ import React from 'react';
 import '../styles/planBar.css';
 import Tv from '../ images/TV.png'; 
 import Cambiar from '../ images/cambiar.png';
-import imgInCancel from '../ images/imgInCancel.png'
+import imgInCancel from '../ images/imgInCancel.png';
+
 function HomeDispositivos(){
     return(
     <div className="homeDispositivos">
