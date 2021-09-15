@@ -1,19 +1,19 @@
 import React from 'react';
 import MovyLogo from '../ images/movylogo.png';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import '../styles/login.css';
 
-function Login(){
-    
-    return(       
+function Login() {
+
+    return (
         <main className="fondo">
-       
+
             <header className="encabezado">
                 <div className="pageName">
                     <img src={MovyLogo}></img>
                 </div>
-                        
-                <div className="access"> 
+
+                <div className="access">
                     <a>Register</a>
                     <a id='login'>Login</a>
                 </div>
@@ -21,13 +21,13 @@ function Login(){
 
             <div className="iniciaSecion">
                 <h1>Inicia sesión</h1>
-                <input id='input'   placeholder="Email o número de teléfono"></input>
+                <input id='input' placeholder="Email o número de teléfono"></input>
                 <input id='input' type="password" placeholder="Contraseña" ></input>
                 <Link to="/home" id="iniciarSesion">Iniciar sesión</Link>
                 <button id='iniciarSesion' type="button" >Iniciar sesión</button>
             </div>
         </main>
-    )           
+    )
 }
 
 export default Login;
