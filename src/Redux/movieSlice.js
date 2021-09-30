@@ -1,5 +1,6 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { getPopularMovies, getRecommended, getTopRated } from '../api/movies';
+//  getSimilarMovies
 
 export const fetchPopularMovie = createAsyncThunk('movie/fetchPopular', async () => {
   const response = await getPopularMovies();
@@ -13,7 +14,10 @@ export const fetchTopRatedMovie = createAsyncThunk('movie/getTopRated', async ()
   const response = await getTopRated();
   return response.results;
 })
-
+// export const fetchSimilarMovies = createAsyncThunk('movie/getSimilarMovies', async () => {
+//   const response = await getSimilarMovies();
+//   return response.results;
+// })
 
 export const movieSlice = createSlice({
   name: 'moive',
@@ -23,6 +27,7 @@ export const movieSlice = createSlice({
     recommended: [],
     topRated: [],
     backgroundImage: [],
+    // similarMovies: [],
   },
   reducers: {
     setBackgroundImage: (state, action) => {
@@ -52,10 +57,16 @@ export const movieSlice = createSlice({
         state.loading = false;
         state.topRated = action.payload;
       })
+      // .addCase(fetchSimilarMovies.pending, (state) => {
+      //   state.loading = true;
+      // })
+      // .addCase(fetchSimilarMovies.fulfilled, (state, action) => {
+      //   state.loading = false;
+      //   state.SimilarMoviesed = action.payload;
+      // })
   }
 }
 )
-
 export const { setBackgroundImage } = movieSlice.actions
 
 export default movieSlice.reducer;

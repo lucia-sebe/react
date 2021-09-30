@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from './pages/login';
 import Home from './pages/home';
 import Main from './pages/main.jsx';
-
+import TrailerMovie from './pages/trailerMovie';
 
 function App(){
   return (
@@ -25,6 +25,10 @@ function App(){
           <Home/>
         </Route>
         
+        <Route path="/trailerMovie/:id">
+          <TrailerMovie/>
+        </Route>
+
       </Switch>
     </Router>
     </>

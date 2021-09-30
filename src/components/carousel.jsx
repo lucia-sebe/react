@@ -1,8 +1,8 @@
-/* eslint-disable react/jsx-key */
-/* eslint-disable react/prop-types */
 import React from 'react';
-import '../styles/home.css';
 import { Poster } from "./movie.jsx";
+import PropTypes from 'prop-types';
+
+import '../styles/home.css';
 
 const Carousel = ({ data, name }) => {
   return (
@@ -12,7 +12,7 @@ const Carousel = ({ data, name }) => {
        <h1 id='title'>{name}</h1>
    
       <div  className="carousel">
-        {data?.map((poster_path) => <Poster data={poster_path}/>)}
+        {data?.map((poster_path) => <Poster key={data.id} data={poster_path}/>)}
       </div>
 
     </div>
@@ -20,4 +20,8 @@ const Carousel = ({ data, name }) => {
   )
 }
 
+Carousel.propTypes = {
+  data: PropTypes.array,
+  name: PropTypes.string,
+}
 export default Carousel;
