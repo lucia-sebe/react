@@ -16,6 +16,7 @@ function Home() {
     const recommended = useSelector((state) => state.movie.recommended);
     const backgroundMovie = useSelector((state) => state.movie.backgroundImage);
     const dispatch = useDispatch();
+
     useEffect(() => {
         dispatch(fetchPopularMovie())
         dispatch(fetchRecommendedMovie())
@@ -26,13 +27,14 @@ function Home() {
         dispatch(setBackgroundImage(recommended[getRandomNumber(recommended.length)]))
     }, [recommended]);
 
-
     return (
         <main>
             {backgroundMovie && <Highlight
                 movie={backgroundMovie}
             />}
+
             {loading && <h1>loading</h1>}
+            
             <div className="listas">
 
                 <Carousel

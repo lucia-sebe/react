@@ -17,6 +17,11 @@ export const getTopRated = () => (
 )
 
 export const getMovieDetails = (movie) => (
-  fetch(`${BASE_URL}/movie/${movie}?api_key=${API_KEY}`)
+  fetch(`${BASE_URL}/movie/${movie}?api_key=${API_KEY}&append_to_response=credits`)
     .then((response) => response.json())
+)
+
+export const getSimilarMovies = (movie_id) => ( 
+  fetch(`${BASE_URL}/movie/${movie_id}/similar?api_key=${API_KEY}`)
+  .then((response) => response.json())
 )
