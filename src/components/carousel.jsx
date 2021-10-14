@@ -24,4 +24,5 @@ Carousel.propTypes = {
   data: PropTypes.array,
   name: PropTypes.string,
 }
+
 export default Carousel;

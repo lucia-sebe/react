@@ -26,7 +26,7 @@ function Home() {
     useEffect(() => {
         dispatch(setBackgroundImage(recommended[getRandomNumber(recommended.length)]))
     }, [recommended]);
-
+console.log({popular})
     return (
         <main>
             {backgroundMovie && <Highlight

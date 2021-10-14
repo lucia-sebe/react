@@ -34,8 +34,8 @@ function PlanBar(){
 
         <header className="opciones">
             <div className="options">
-            <button className="price" onClick= {()=>{setPlanBarState('price')} }>
-                <img src={Shape}></img>
+            <button className="price" onClick= {()=>{setPlanBarState('price')} }>         
+            <img src={Shape}></img>
             </button>
             <button className="cancel" onClick= {()=>{setPlanBarState('cancel')} }>
                 <img src={Cancel}></img>       

@@ -18,7 +18,7 @@
     background-color: #0578FF;
     border-radius: 4px;
     margin: 2em;
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
@@ -44,6 +44,14 @@
     margin: 0.5em;
     border-radius: 4px;
     border: none;
+    color: #111;
+}
+#inputPass{
+    padding: 0.9em 12em 0.9em 0.5em;
+    margin: 0.5em;
+    border-radius: 4px;
+    border: none;
+    color: #111;
 }
 
 #iniciarSesion{
