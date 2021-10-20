@@ -1,11 +1,10 @@
 /* eslint-disable no-undef */
 
-describe('movie-page', () => {
-    
+describe('testing root', () => {
     beforeEach(() => {
-      cy.visit('http://localhost:3000/')
-    })
-
+        cy.visit('/')
+    });
+    
     it('probando btn price', () => {
         cy.get('.price').click()
         cy.get('#text ').should('have.text', 'Elige un plan y mira lo que quieras en Movy.')
@@ -25,15 +24,20 @@ describe('movie-page', () => {
         cy.get('#iniciarSesion').click()
     })
 
+})
+
+describe('testing home' , () => {
+    beforeEach(() => {
+        cy.visit('/home')
+    });
+
     it('porbando scroll', () => {
-        cy.visit('http://localhost:3000/home')
         cy.get('.carouselBox').first().scrollTo('center')
         cy.get('.carouselBox').eq(1).scrollTo('center')
         cy.get('.carouselBox').last().scrollTo('right')
     })  
 
     it('carousel', () => {
-        cy.visit('http://localhost:3000/home')
         cy.get('.carousel').first().children().should('have.length', 20)
     })
 })
