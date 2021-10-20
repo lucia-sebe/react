@@ -7,6 +7,7 @@ import { faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import { fetchSimilarMovies, fetchMovieDetails } from '../Redux/movieSlice';
 import CarouselBackdrop from '../components/caruselBackdrop';
 import '../styles/trailerMovie.css';
+import { Link } from 'react-router-dom';
 
 function TrailerMovie() {
 
@@ -24,7 +25,9 @@ function TrailerMovie() {
     return (
         <div>
             <div className="w-screen h-screen bg-cover" style={{ backgroundImage: `url(${IMAGE_URL}${movieDetails?.backdrop_path})` }}>
+              <Link to='/home'>  
                 <FontAwesomeIcon icon={faTimesCircle} size="2x" className="cursor-pointer" />
+              </Link>
             </div>
 
             <div className="infromation flex w-full">
@@ -34,7 +37,7 @@ function TrailerMovie() {
                 </div>
 
                 <div className="justify-end w-2/5">
-                    <p>Cast: {movieDetails?.credits?.cast?.map((item) => `${item.name} , `)}</p>
+                    <p>Cast: {movieDetails?.credits?.cast?.slice(0, 4).map((item) => ` ${item.name}`) + " and more"}</p>
                     <p>Genres: {movieDetails?.genres?.map((item) => `${item.name}  `)}</p>
                 </div>
             </div>

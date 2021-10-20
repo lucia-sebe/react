@@ -54,6 +54,7 @@
     },
     "devDependencies": {
         "autoprefixer": "^9.8.6",
+        "cypress": "^8.6.0",
         "eslint": "^7.30.0",
         "eslint-plugin-react": "^7.24.0",
         "postcss": "^7.0.36",
