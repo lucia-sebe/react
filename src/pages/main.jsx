@@ -1,9 +1,8 @@
 import React from 'react';
-import '../styles/main.css';
 import MovyLogo from '../ images/movylogo.png';
 import PlanBar from '../components/planBar';
-import { Link } from 'react-router-dom';
 import Footer from '../components/footer'
+import { LoginButton } from "../components/login";
 
 function Main() {
 
@@ -17,7 +16,7 @@ function Main() {
 
           <div className="access">
             <a>Register</a>
-            <Link to="/login" id="login">Login</Link>
+            <LoginButton id="login" />
           </div>
         </header>
 
