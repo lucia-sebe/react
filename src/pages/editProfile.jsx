@@ -9,7 +9,7 @@ function EditProfile() {
     return (
         isAuthenticated && (
 
-            <div className="w-screen h-screen bg-black">
+            <div className="w-screen h-screen bg-black text-white">
                 <div className="p-8">
                     <img src={MovyLogo} className="w-24"></img>
                 </div>
