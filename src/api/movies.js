@@ -21,7 +21,12 @@ export const getMovieDetails = (movie) => (
     .then((response) => response.json())
 )
 
-export const getSimilarMovies = (movie_id) => ( 
+export const getSimilarMovies = (movie_id) => (
   fetch(`${BASE_URL}/movie/${movie_id}/similar?api_key=${API_KEY}`)
-  .then((response) => response.json())
+    .then((response) => response.json())
+)
+
+export const getTrailerMovie = (movie_id) => (
+  fetch(`${BASE_URL}/movie/${movie_id}/videos?api_key=${API_KEY}`)
+    .then((response) => response.json())
 )
